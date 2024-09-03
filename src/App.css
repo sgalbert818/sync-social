@@ -1,38 +1,346 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.9em;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+}
+
+.user-logout {
+  padding: 20px 25px 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.app-body {
+  display: flex;
+  height: 100%;
+  padding: 0 10px 15px 10px;
+}
+
+.split {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.split-foc {
+  width: 30%;
+  padding-left: 0;
+  padding-top: 15px;
+}
+
+.mt15 {
+  margin-top: 10px;
+}
+
+.prev-next-btns {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.prev-next-btns button, .user-logout button {
+  border: none;
+  background-color: white;
+}
+
+.fa {
+  font-size: 1.2em;
+}
+
+.calendar-header {
+  margin: 0 5px;
+  width: 200px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.days-of-week {
+  padding-left: 7px;
+  padding-bottom: 3px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calendar-container {
+  height: 100%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calendar-body {
+  display: grid;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(7, 1fr);
+  height: calc(100vh - 130px);
+  width: 100.1%;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.cal-box {
+  font-size: 14px;
+  padding: 3px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.event {
+  padding: 0 4px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 2px 3px 2px;
+  font-size: 0.7em;
+}
+
+.focus-box {
+  height: auto;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
+}
+
+.focus-box h3, .focus-box p {
+  margin: 5px
+}
+
+.add-event {
+  height: auto;
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
+}
+
+.add-event label {
+  font-size: 0.9em;
+}
+
+.cal-input {
+  margin: 8px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.corner-number {
+  height: 25px;
+  width: 25px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 50%;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-right: 5px;
+  font-size: 0.9em !important;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin: 0 3px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 8px;
+}
+
+input[type="date"] {
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 8px;
+}
+
+.time-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: -8px 0;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.fa-dropdown {
+  font-size: 0.8em;
+  position: absolute;
+  top: 25%;
+  right: 10px;
+}
+
+select {
+  text-transform: capitalize;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 27px 4px 8px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+
+#owner-input, #owner-edit {
+  width: 100%;
+}
+
+.my-group {
+  height: auto;
+  padding: 5px 10px 10px 10px;
+  border-radius: 5px;
+  background-color: rgb(235, 235, 235);
+}
+
+.grouplings {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-disp {
+  margin: 5px 5px 0 0;
+  padding: 3px 6px;
+  color: white !important;
+  width: auto;
+  border-radius: 5px;
+}
+
+.fa-button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  transition: 0.2s;
+}
+
+.fa-button:hover {
   color: white;
+  background-color: black;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-button:disabled {
+  color: rgb(200, 200, 200);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-button:disabled:hover {
+  color: rgb(200, 200, 200);
+  background-color: rgb(235, 235, 235);
+  cursor: auto;
+}
+
+.error {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+/* LOGIN PAGE */
+
+.login-form {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(235,235,235);
+  flex-direction: column;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.login input, .login h1 {
+  margin-bottom: 10px;
+}
+
+.login-error {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+/* class BG color for each user in the group */
+
+.sarah {
+  background-color: #ff7b4b;
+  color: #ff7b4b;
+  border: 2px solid #ff7b4b;
+}
+
+.grace {
+  background-color: #e2e20a;
+  color: #e2e20a;
+  border: 2px solid #e2e20a;
+}
+
+.avery {
+  background-color: #29ed6e;
+  color: #29ed6e;
+  border: 2px solid #29ed6e;
+}
+
+.chloe {
+  background-color: #455eef;
+  color: #455eef;
+  border: 2px solid #455eef;
+}
+
+.emerson {
+  background-color: #2dc0ff;
+  color: #2dc0ff;
+  border: 2px solid #2dc0ff;
+}
+
+.madeline {
+  background-color: #a477ff;
+  color: #a477ff;
+  border: 2px solid #a477ff;
 }

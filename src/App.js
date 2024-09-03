@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react"
+import Calendar from "./components/Calendar"
+import Focus from "./components/Focus"
+import Login from "./components/Login"
+import User from "./components/User"
+import { AuthContext } from "./AuthContext"
 
 function App() {
+
+  const { auth } = React.useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {!auth && <Login></Login>}
+      {auth && <div>
+        <div className="App">
+          <User></User>
+          <div className="app-body">
+            <Calendar></Calendar>
+            <Focus></Focus>
+          </div>
+        </div>
+      </div>}
     </div>
   );
 }
