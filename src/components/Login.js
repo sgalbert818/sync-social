@@ -27,7 +27,7 @@ export default function Login() {
         const password = loginForm.password;
         setLoading(true);
         setLoginError(null);
-        const response = await fetch('http://localhost:3000/api/user/login', {
+        const response = await fetch('https://sync-social-f87ce6f5ca84.herokuapp.com/api/user/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })

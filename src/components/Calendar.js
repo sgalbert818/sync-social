@@ -21,7 +21,7 @@ export default function Calendar() {
 
     React.useEffect(() => { // get all events in calendar events DB
         const fetchEvents = async () => {
-            const response = await fetch('http://localhost:3000/api/events');
+            const response = await fetch('https://sync-social-f87ce6f5ca84.herokuapp.com/api/events');
             const data = await response.json();
             if (response.ok) {
                 setEvents(data)

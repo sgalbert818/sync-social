@@ -23,7 +23,7 @@ export default function Focus() {
 
     React.useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch('http://localhost:3000/api/user');
+            const response = await fetch('https://sync-social-f87ce6f5ca84.herokuapp.com/api/user');
             const data = await response.json();
             if (response.ok) {
                 const usersArray = [];
@@ -81,7 +81,7 @@ export default function Focus() {
                 allDay: formData.allDay,
                 owner: formData.owner
             }
-            const response = await fetch('http://localhost:3000/api/events/', {
+            const response = await fetch('https://sync-social-f87ce6f5ca84.herokuapp.com/api/events/', {
                 method: 'POST',
                 body: JSON.stringify(event),
                 headers: {
@@ -110,7 +110,7 @@ export default function Focus() {
     }
 
     async function handleDelete() {
-        const response = await fetch(`http://localhost:3000/api/events/${focus._id}`, {
+        const response = await fetch(`https://sync-social-f87ce6f5ca84.herokuapp.com/api/events/${focus._id}`, {
             method: 'DELETE',
         });
         //const data = await response.json();
@@ -163,7 +163,7 @@ export default function Focus() {
                 allDay: editData.allDay,
                 owner: editData.owner
             }
-            const response = await fetch(`http://localhost:3000/api/events/${focus._id}`, {
+            const response = await fetch(`https://sync-social-f87ce6f5ca84.herokuapp.com/api/events/${focus._id}`, {
                 method: 'PATCH',
                 body: JSON.stringify(event),
                 headers: {
