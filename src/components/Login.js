@@ -8,8 +8,8 @@ export default function Login() {
     const [loginError, setLoginError] = React.useState(null)
     const [loading, setLoading] = React.useState(null)
     const [loginForm, setLoginForm] = React.useState({
-        username: '',
-        password: ''
+        username: 'sarah',
+        password: 'sarah'
     })
 
     function handleChange(e) {
