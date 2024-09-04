@@ -1,3 +1,9 @@
+Sync Social is a dynamic app designed to simplify group planning. With Sync Social, users can effortlessly log in, create events, and manage a shared group calendar. Perfect for friends and teams, this app leverages React for a smooth and responsive front-end experience and uses MongoDB, Express, and Node.js on the backend for robust performance. User authentication is secured with JSON Web Tokens, ensuring a safe and seamless experience for planning your next get-together.
+
+Created by Sarah Albert - sgalbert818@yahoo.com
+
+Live App - https://sgalbert818-sync-social.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
