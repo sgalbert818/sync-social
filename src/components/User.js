@@ -39,9 +39,16 @@ export default function User() {
     return (
         <>
             {auth && <div className="user-logout">
-                <p>Welcome, <span style={{ fontWeight: 700 }}>{auth.username}</span></p>
+                <div className="welcome-logout">
+                    <div className="welcome">
+                        <p>Welcome, <span style={{ fontWeight: 700 }}>{auth.username}</span></p>
+                    </div>
+                    <div>
+                        <button onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} className="fa" /></button>
+                    </div>
+                </div>
                 <div className="prev-next-btns">
-                    <button onClick={prevMonth}><FontAwesomeIcon icon={faArrowLeft} className="fa"/></button>
+                    <button onClick={prevMonth}><FontAwesomeIcon icon={faArrowLeft} className="fa" /></button>
                     <div className="calendar-header">
                         <div>
                             <h1>
@@ -50,9 +57,6 @@ export default function User() {
                         </div>
                     </div>
                     <button onClick={nextMonth}><FontAwesomeIcon icon={faArrowRight} className="fa" /></button>
-                </div>
-                <div>
-                    <button onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} className="fa"/></button>
                 </div>
             </div>}
         </>
