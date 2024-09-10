@@ -22,7 +22,7 @@ p {
 }
 
 .user-logout {
-  padding: 15px 20px;
+  padding: 15px 40px 15px 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -33,7 +33,7 @@ p {
 .app-body {
   display: flex;
   height: 100%;
-  padding: 0 10px 15px 10px;
+  padding: 0 25px 15px 25px;
 }
 
 .split {
@@ -99,7 +99,7 @@ p {
   display: grid;
   grid-template-rows: repeat(6, minmax(0, 1fr));
   grid-template-columns: repeat(7, 1fr);
-  height: calc(100vh - 130px);
+  height: calc(100vh - 145px);
   width: 100.1%;
   border-radius: 5px;
   gap: 10px;
@@ -320,39 +320,39 @@ select {
 /* class BG color for each user in the group */
 
 .sarah {
-  background-color: #ff7b4b;
-  color: #ff7b4b;
-  border: 2px solid #ff7b4b;
+  background-color: #c64f24;
+  color: #c64f24;
+  border: 2px solid #c64f24;
 }
 
 .grace {
-  background-color: #e2e20a;
-  color: #e2e20a;
-  border: 2px solid #e2e20a;
+  background-color: #c5c500;
+  color: #c5c500;
+  border: 2px solid #c5c500;
 }
 
 .avery {
-  background-color: #29ed6e;
-  color: #29ed6e;
-  border: 2px solid #29ed6e;
+  background-color: #589b70;
+  color: #589b70;
+  border: 2px solid #589b70;
 }
 
 .chloe {
-  background-color: #455eef;
-  color: #455eef;
-  border: 2px solid #455eef;
+  background-color: #50598c;
+  color: #50598c;
+  border: 2px solid #50598c;
 }
 
 .emerson {
-  background-color: #2dc0ff;
-  color: #2dc0ff;
-  border: 2px solid #2dc0ff;
+  background-color: #66a5c0;
+  color: #66a5c0;
+  border: 2px solid #66a5c0;
 }
 
 .madeline {
-  background-color: #a477ff;
-  color: #a477ff;
-  border: 2px solid #a477ff;
+  background-color: #7359a6;
+  color: #7359a6;
+  border: 2px solid #7359a6;
 }
 
 /* media queries */
